@@ -26,10 +26,10 @@ This repository includes implementations of several clustering algorithms using 
 **Features**
 
 Implementations of popular clustering algorithms:
-K-means
-Hierarchical Clustering
-DBSCAN
-Gaussian Mixture Models
-Example datasets for testing and experimentation
-Visualization tools to help interpret clustering results
+K-means,
+Hierarchical Clustering,
+DBSCAN,
+Gaussian Mixture Models,
+Example datasets for testing and experimentation,
+Visualization tools to help interpret clustering results,
 Comprehensive documentation and tutorials
