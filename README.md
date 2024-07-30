@@ -4,12 +4,19 @@ Welcome to the Clustering Models repository! This repository contains various cl
 It aims to provide examples and tools for performing clustering analysis on different datasets.
 
 Table of Contents
+
 Overview
+
 Features
+
 Installation
+
 Usage
+
 Models
+
 Contributing
+
 License
 
 Overview
