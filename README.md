@@ -19,10 +19,12 @@ Contributing
 
 License
 
-Overview
+**Overview**
+
 This repository includes implementations of several clustering algorithms using R. It is designed for data scientists, statisticians, and analysts interested in exploring clustering techniques and applying them to their own data.
 
-Features
+**Features**
+
 Implementations of popular clustering algorithms:
 K-means
 Hierarchical Clustering
