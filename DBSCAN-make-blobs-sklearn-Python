@@ -1,0 +1,26 @@
+# Install necessary packages if not already installed
+!pip install numpy matplotlib seaborn scikit-learn
+
+# Import required libraries
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import make_blobs
+from sklearn.cluster import DBSCAN
+
+# Generate the make_blobs dataset
+centers = [[1, 1], [-1, -1], [1, -1]]
+X, _ = make_blobs(n_samples=750, centers=centers, cluster_std=0.4, random_state=0)
+
+# Apply DBSCAN
+dbscan = DBSCAN(eps=0.3, min_samples=10)
+labels = dbscan.fit_predict(X)
+
+# Plot the clusters
+plt.figure(figsize=(10, 6))
+sns.scatterplot(X[:, 0], X[:, 1], hue=labels, palette='viridis')
+plt.title("DBSCAN Clustering on make_blobs Dataset")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+plt.legend(title="Cluster")
+plt.show()
