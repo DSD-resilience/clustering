@@ -1,0 +1,22 @@
+# Load necessary library
+library(ggplot2)
+
+# Load the iris dataset
+data(iris)
+
+# Remove the species column to keep only numeric data
+iris_data <- iris[, 1:4]
+
+# Run k-means clustering (choosing k = 3 clusters)
+set.seed(123)  # Ensure reproducibility
+kmeans_result <- kmeans(iris_data, centers = 3, nstart = 20)
+
+# Add cluster assignments to the original dataset
+iris$Cluster <- as.factor(kmeans_result$cluster)
+
+# Visualize clustering results
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Cluster)) +
+  geom_point(size = 3) +
+  labs(title = "K-Means Clustering of Iris Dataset",
+       x = "Sepal Length", y = "Sepal Width") +
+  theme_minimal()
